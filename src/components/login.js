@@ -14,10 +14,9 @@ const LoginComponent = (props) => {
         <MuiThemeProvider>   
         <form onSubmit={ (event) => props.submitHandler(event) } style={style}>
 
-
             <TextField
             hintText="Enter username"
-            floatingLabelText="Username :" name="userName"
+            floatingLabelText="Username :" name="username"
             /><br />
 
             <TextField
@@ -25,9 +24,7 @@ const LoginComponent = (props) => {
             floatingLabelText="Password :" name="password"
             /><br />
 
-            <RaisedButton label="Default" type="submit" style={{marginTop:'30px'}}/>   
-
-
+            <RaisedButton label="Submit" type="submit" style={{marginTop:'30px'}}/>   
         </form>
         </MuiThemeProvider>   
     );

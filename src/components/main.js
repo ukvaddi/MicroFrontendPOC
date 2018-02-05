@@ -11,7 +11,6 @@ import OrderLookup from './OrderLookup';
 const Main = () => (
   <main>
     <Switch>
-    
       <Route path='/products' component={ProductComponent}/>
       <Route path='/orderlookup' component={OrderLookup}/>
     </Switch>
