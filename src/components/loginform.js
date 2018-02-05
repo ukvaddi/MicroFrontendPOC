@@ -2,18 +2,24 @@ import React, { Component } from 'react';
 import Header from './header';
 import Main from './main';
 
+import LoginComponent from './login';
+
 
 export default class SignInForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {isAuthenticated: false};
+      this.state = {
+        isAuthenticated: false
+      };
   
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(event) {
-      this.setState({isAuthenticated: true});
       event.preventDefault();
+      alert(1);
+      this.setState({isAuthenticated: true});
+      
       fetch('http://test-container.hyd.ftd.com:6090/apis/getrole/', {
         method: 'POST',
         headers: {
@@ -24,7 +30,7 @@ export default class SignInForm extends React.Component {
           password:  event.target.password.value,
           userName: event.target.username.value,
         })
-      }) .then((response) => response.json())
+      }).then((response) => response.json())
       .then((responseJson) => {
         console.log('-->',responseJson);
       })
@@ -36,34 +42,13 @@ export default class SignInForm extends React.Component {
     }
   
     render() {
+      const jsx=<div>
+                  <Header/>
+                  <Main />
+                </div>;
       return (
-    <div>
-     
-      
-     {!this.state.isAuthenticated? 
-     <form onSubmit={this.handleSubmit}>
-           <br />
-           <label>
-           UserName:
-           <input type="text" name="username" />
-         </label>
-         <br />
-         <label>
-           Password:
-           <input type="text" name="password" />
-         </label>
-         <br />
-          <input type="submit" value="Submit" />
-        </form>
-    :null}
-        
-{this.state.isAuthenticated ? 
-  <div>
-   <Header/>
-   <Main />
-   </div>
-    : null
-  }
+        <div>
+            {this.state.isAuthenticated? jsx:<LoginComponent submitHandler={this.handleSubmit}/>  }
        </div>
       );
     }
