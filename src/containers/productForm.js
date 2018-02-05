@@ -3,6 +3,7 @@ import React,{Component} from 'react';
 import TextField from 'material-ui/TextField';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
+import MyField from '../components/MyField';
 
 export default class ProductForm extends Component{
 
@@ -19,13 +20,13 @@ export default class ProductForm extends Component{
         };
         
         this.permissions={
-            name:'W',
+            name:'H',
             price:'R',
             sku:'R',
             status:'R',
             code:'W',
             decs:'R'
-        };
+        }
 
         this.state={
             productDetails:this.productDetails,
@@ -43,36 +44,39 @@ export default class ProductForm extends Component{
         return (
                 <MuiThemeProvider>            
                     <form className="mb-4">
-                        <TextField
-                            hintText="Enter product name"
+                        <MyField  hintText="Enter product name"
                             floatingLabelText="Name"
-                            value={this.state.productDetails.name}
-                            
-                        /><br />
+                            value={this.state.productDetails.name} permission={this.state.permissions.name}/>
+                            <br/>
 
-                        <TextField
-                        hintText="Enter product price"
+                        <MyField  hintText="Enter product price"
                         floatingLabelText="Price"
-                        /><br />
+                        value={this.state.productDetails.price} permission={this.state.permissions.price}/>
+                        <br/>
 
-                        <TextField
+                      
+                        <MyField
                         hintText="Enter product SKU"
                         floatingLabelText="SKU"
+                        value={this.state.productDetails.sku} permission={this.state.permissions.sku}
                         /><br />
 
-                        <TextField
+                        <MyField
                         hintText="Enter product status"
                         floatingLabelText="Status"
+                        value={this.state.productDetails.status} permission={this.state.permissions.status}
                         /><br />
 
                         <TextField
                         hintText="Enter product code"
                         floatingLabelText="Code"
+                        value={this.state.productDetails.code} permission={this.state.permissions.code}
                         /><br />
 
                         <TextField
                         hintText="Enter product description"
                         floatingLabelText="Description"
+                        value={this.state.productDetails.decs} permission={this.state.permissions.decs}
                         /><br />
 
                         <RaisedButton label="Default" style={style}/>    
