@@ -35,6 +35,8 @@
     "react-router": "^2.0.1",
     "react-router-dom": "4.1.1",
     "react-router-role-authorization": "1.1.4",
-    "redux": "^3.0.4"
+    "redux": "^3.0.4",
+    "material-ui": "^0.20.0",
+    "react-jsonschema-form": "^1.0.0"
   }
 }
