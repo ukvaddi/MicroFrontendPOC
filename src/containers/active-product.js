@@ -2,7 +2,7 @@ import React ,{Component} from 'react';
 import {connect} from 'react-redux';
 
 import ProductForm from './ProductForm';
-
+import GenericForm from './generic-form';
 
 class ProductDetail extends Component{
     

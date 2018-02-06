@@ -18,8 +18,8 @@ export default class SignInForm extends React.Component {
     event.preventDefault();
 
    
-	//http://test-container.hyd.ftd.com:6090/apis/getrole/
-    fetch('http://www.mocky.io/v2/5a7850992f00004900668f32', {
+	//
+    fetch('http://test-container.hyd.ftd.com:6090/apis/getrole/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
