@@ -12,8 +12,11 @@ const LoginComponent = (props) => {
     };
     return (
         <MuiThemeProvider>   
+        
         <form onSubmit={ (event) => props.submitHandler(event) } style={style}>
-
+            {props.loginSubmitLoading?<h1>Fetching the user details....</h1>:''}
+            {props.loginStatus == false?<h1>Invalid  user details....</h1>:''}    
+           
             <TextField
             hintText="Enter username"
             floatingLabelText="Username :" name="username"

@@ -6,12 +6,12 @@ import { createStore, applyMiddleware } from 'redux';
 import Root from './components/root';
 import reducers from './reducers';
 import { BrowserRouter } from 'react-router-dom'
+import configureStore from "./store/store";
 
-
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const store = configureStore();
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Provider store={store}>
     <BrowserRouter>
       <Root />
     </BrowserRouter>

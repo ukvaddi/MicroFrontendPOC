@@ -29,14 +29,15 @@
     "babel-preset-stage-1": "^6.1.18",
     "enlist": "^0.1.0",
     "lodash": "^4.17.5",
+    "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-jsonschema-form": "^1.0.0",
     "react-redux": "5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "4.2.2",
     "react-router-role-authorization": "1.1.4",
     "redux": "^3.0.4",
-    "material-ui": "^0.20.0",
-    "react-jsonschema-form": "^1.0.0"
+    "redux-thunk": "^2.2.0"
   }
 }

@@ -5,3 +5,4 @@ export default function selectProduct(product){
         payLoad:product
     };
 }
+
