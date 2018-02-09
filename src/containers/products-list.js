@@ -2,7 +2,7 @@ import React ,{Component} from 'react';
 import {connect} from 'react-redux';
 
 import {bindActionCreators} from 'redux';
-import selectProduct from '../actions/index';
+import * as actions from '../actions/index';
 
  class ProductsList extends Component{
     
@@ -40,7 +40,7 @@ function mapStatetoProps(state){
 //anything which is returned from this function will end up as props  on the booklist container
 function mapDispatchToProps(dispatch){
     //whenever selectBook action is called,the result should be passed to passed to all reducers
-    return bindActionCreators({selectProduct:selectProduct},dispatch);
+    return bindActionCreators({selectProduct:actions.selectProduct},dispatch);
 }
 
 export default connect(mapStatetoProps,mapDispatchToProps)(ProductsList);

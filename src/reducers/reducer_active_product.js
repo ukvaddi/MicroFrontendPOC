@@ -1,7 +1,9 @@
-export default function(state = null,action){
+import { GET_USER_PERMISSIONS, PRODUCT_SELECTED } from '../constants/ActionTypes'
+
+export default function(state = {},action){
     
     switch(action.type){
-        case 'BOOK_SELECTED':
+        case PRODUCT_SELECTED:
             return action.payLoad;
     }
     
