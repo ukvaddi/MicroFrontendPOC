@@ -6,34 +6,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import MyField from '../components/MyField';
 
 class ProductForm extends Component{
-
-    // constructor(props){
-    //     super(props);
-
-    //     // this.productDetails={
-    //     //     name:'Rose',
-    //     //     price:12,
-    //     //     sku:123,
-    //     //     status:'Active',
-    //     //     code:'R123',
-    //     //     decs:'This is description'
-    //     // };
-        
-    //     // this.permissions={
-    //     //     name:'H',
-    //     //     price:'R',
-    //     //     sku:'R',
-    //     //     status:'R',
-    //     //     code:'W',
-    //     //     decs:'R'
-    //     // }
-
-    //     // this.state={
-    //     //     productDetails:this.productDetails,
-    //     //     permissions:this.permissions
-    //     // };
-       
-    // }
     
     render(){
         

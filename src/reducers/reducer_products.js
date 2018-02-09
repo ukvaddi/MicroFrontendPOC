@@ -1,6 +1,5 @@
 
 export default function(){
-    debugger;
     return [
             {title:'Rose',id:1},
             {title:'Lilly',id:2},
