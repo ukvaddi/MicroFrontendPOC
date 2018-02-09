@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './header';
 import Main from './main';
-import SignInForm from './loginform';
+import SignInForm from '../containers/loginform';
 
 export default class Root extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class Root extends Component {
       
       <div>
         <div>
-        <SignInForm/>       
+        <SignInForm/>      
        </div>
       </div>
     );

@@ -1,0 +1,10 @@
+.formStyles{
+    border:'1px solid #ccc';
+    padding:'50px';
+    margin:'20% auto';
+    width:'50%';
+}
+
+.errorMessage{
+    color:red;
+}
