@@ -23,7 +23,7 @@ const LoginComponent = (props) => {
             /><br />
 
             <TextField
-            hintText="Enter password"
+            hintText="Enter password for test"
             floatingLabelText="Password :" name="password"
             /><br />
 
